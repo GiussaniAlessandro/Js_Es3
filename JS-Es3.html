@@ -1,0 +1,35 @@
+<html>
+    <title>Es_3</title>
+    
+      <head>
+    <body>
+        <h1>JS Es 3</h1>
+        <h2>Calculator</h2>
+        <table id="tab" border="2">
+            <tr>
+                <th>N1</th> 
+                <!-- <th>OPERATION</th>
+                 <th>N2</th>
+                  <th>ris</th> -->
+                </table>
+            </tr>
+            <p>INSERISCI PRIMO NUMERO</p> <input id ='input1' type='number'>
+            <!-- <p>INSERISCI SECONDO NUMERO</p> <input id='input2' type='number'> -->
+            <button id='btn1'>add</button>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+               $("#btn1").click(function(){
+                var n1=parseInt($("#input1").val())
+                var string="<tr><td>"+n1+"</td></tr>"
+                    $("#tab").append(string)
+               })
+                       
+
+
+
+                   
+            </script>
+      </head>  
+        
+    </body>
+</html>
