@@ -2,33 +2,30 @@
     <title>Es_3</title>
     
       <head>
-    <body>
+        <body>  
+    <br>
         <h1>JS Es 3</h1>
         <h2>Calculator</h2>
         <table id="tab" border="2">
             <tr>
                 <th>N1</th> 
-                <!-- <th>OPERATION</th>
+                <th>OPERATION</th>
                  <th>N2</th>
-                  <th>ris</th> -->
+                  <th>ris</th>
+                </tr>
                 </table>
-            </tr>
-            <p>INSERISCI PRIMO NUMERO</p> <input id ='input1' type='number'>
-            <!-- <p>INSERISCI SECONDO NUMERO</p> <input id='input2' type='number'> -->
-            <button id='btn1'>add</button>
+              </br></br>
+              
+            <input type="number" id="num1" placeholder="first number" />
+          </br></br>
+            <input type="number" id="num2" placeholder="second number" />
+          </br></br>
+            <button id="btn1">+</button>
+            <button id="btn2">-</button>
+            <button id="btn3">*</button>
+            <button id="btn4">/</button>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-               $("#btn1").click(function(){
-                var n1=parseInt($("#input1").val())
-                var string="<tr><td>"+n1+"</td></tr>"
-                    $("#tab").append(string)
-               })
-                       
-
-
-
-                   
-            </script>
+            <script src = "es_3.js"></script>
       </head>  
         
     </body>
