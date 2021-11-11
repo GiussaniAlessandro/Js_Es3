@@ -76,6 +76,36 @@
 //    input.val("");
 //    input2.val("");
 // });
+var array = new Array();
+var i = 0;
+var n1 = 0;
+var n2 = 0;
+var risultato = 0;
+var segno = "";
+for (var index = 0; index < array.length; index++) {
+    var string =
+            "<tr><td>" +
+            localStorage.getItem('n1') +
+            "</td><td style='text-align:center'>" +
+            localStorage.getItem('segno') +
+            "</td><td>" +
+            localStorage.getItem('n2') +
+            "</td><td>" +
+            localStorage.getItem('risultato') +
+            "</td></tr>";
+            $("#tab").append(string); 
+}
+// var string =
+// "<tr><td>" +
+// localStorage.getItem('n1') +
+// "</td><td style='text-align:center'>" +
+// localStorage.getItem('segno') +
+// "</td><td>" +
+// localStorage.getItem('n2') +
+// "</td><td>" +
+// localStorage.getItem('risultato') +
+// "</td></tr>";
+// $("#tab").append(string);
 
 $("#btn1").click(function (){
     calculation("+");
@@ -95,8 +125,8 @@ $("#btn4").click(function (){
     console.log("input1", input1.val());
     console.log("input2", input2.val());
     if (input1.val() && input2.val()) {
-      var n1 = parseInt(input1.val());
-      var n2 = parseInt(input2.val());
+        n1 = parseInt(input1.val());
+        n2 = parseInt(input2.val());
     //   var risultato = n1 + n2;
       switch (segno){
 
@@ -130,4 +160,11 @@ $("#btn4").click(function (){
       input1.val("");
       input2.val("");
     };
-  };
+localStorage.setItem('n1', n1);
+localStorage.setItem('n2', n2);
+localStorage.setItem('segno', segno);
+localStorage.setItem('risultato', risultato);
+array[i] = string(n1+";"+segno,n2,risultato);
+localStorage.setItem('lenght',array.length);
+i = i+1;
+};
